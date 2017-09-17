@@ -539,8 +539,8 @@ body.close .content{
   }
 
   body.close .sidebar{
-    -webkit-transform: translateX(300px);
-            transform: translateX(300px);
+    -webkit-transform: translateX(-300px);
+            transform: translateX(-300px);
   }
 
   body.close .sidebar-toggle{
@@ -550,8 +550,8 @@ body.close .content{
   }
 
   body.close .content{
-    -webkit-transform: translateX(300px);
-            transform: translateX(300px);
+    -webkit-transform: translateX(-300px);
+            transform: translateX(-300px);
   }
 
   body.close .app-nav, body.close .github-corner{
