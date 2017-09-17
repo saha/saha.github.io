@@ -1,3 +1,10 @@
+function setTitle(vm){
+  var title = vm.route.path.substr(1);
+  if( typeof vm.route.query.id !=='undefined')
+    title=vm.route.query.id;
+  document.title="lodash "+title+" آموزش";
+  
+}
 function changeTemplate(name){
   var themePath=`https://saha.github.io/apps/lodash//css/${name}-rtl.css`;
   var themeEl=document.getElementById('theme');
@@ -73,7 +80,7 @@ var config = merge({
   loadNavbar: null,
   homepage: 'README.md',
   coverpage: '',
-  basePath: '',
+  basePath: '/apps/lodash/',
   auto2top: false,
   name: '',
   themeColor: '',
@@ -3465,6 +3472,7 @@ function initRender (vm) {
   }
   vm._updateRender();
   toggleClass(body, 'ready');
+
 }
 
 var cached$1 = {};
@@ -3719,7 +3727,7 @@ var lastRoute = {};
 function updateRender (vm) {
   vm.router.normalize();
   vm.route = vm.router.parse();
-  document.title="آموزش "+document.title+" lodash";
+  setTitle(vm);
   body.setAttribute('data-page', vm.route.file);
 }
 
@@ -3851,6 +3859,7 @@ function fetchMixin (proto) {
     this._fetch(function (result) {
       this$1.$resetEvents();
       callHook(this$1, 'doneEach');
+        setTitle(this$1);
       cb();
     });
   };
@@ -3934,10 +3943,12 @@ function ready (callback) {
   }
 
   document.addEventListener('DOMContentLoaded', callback);
+
 }
 
 function Docsify () {
   this._init();
+
 }
 
 var proto = Docsify.prototype;
