@@ -102,7 +102,7 @@ if (script) {
     }
   }
 
-  if (config.loadSidebar === true) { config.loadSidebar = '_sidebar.md'; }
+  if (config.loadSidebar === true) { config.loadSidebar = 'sidebar.md'; }
   if (config.loadNavbar === true) { config.loadNavbar = '_navbar.md'; }
   if (config.coverpage === true) { config.coverpage = '_coverpage.md'; }
   if (config.repo === true) { config.repo = ''; }
