@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <meta name="description" content="Description">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link id="theme" rel="stylesheet" href="/css/vue-rtl.css">
+  <link rel="stylesheet" href="/bower_components/samim-font/dist/font-face.css">
+</head>
+<body style="font-family:'Samim'">
+  <nav>
+    <a onclick="changeTemplate('vue');">light</a>
+    <a onclick="changeTemplate('dark');">dark</a>
+  </nav>
+  <div id="app"></div>
+</body>
+<script>
+  window.$docsify = {
+    routerMode: 'hash',
+    search: 'auto', // default
+    search: {
+      maxAge: 86400000, // Expiration time, the default one day
+      paths: [], // or 'auto'
+      placeholder: 'Type to search',
+      noData: 'No Results!',
+      // Headline depth, 1 - 6
+      depth: 2
+    },
+    autoHeader: true,
+    auto2top: true,
+    loadSidebar: true,
+    subMaxLevel: 3,
+    name: 'آموزش lodash',
+    repo: '',
+    maxLevel: 3,
+    urlSeo:false
+  }
+</script>
+<style>
+  .app-sub-sidebar .section-link::befor{
+    content: '-';
+    padding-right: 4px
+  }
+</style>
+<script src="/js/docsify.js"></script>
+</html>
