@@ -1,5 +1,5 @@
 function changeTemplate(name){
-  var themePath=`/css/${name}-rtl.css`;
+  var themePath=`https://saha.github.io/apps/lodash//css/${name}-rtl.css`;
   var themeEl=document.getElementById('theme');
   themeEl.href=themePath;
 }
